@@ -53,12 +53,14 @@ const serieASquad = [
   },
 ];
 
-const randomNumber = Math.floor(Math.random() * 100) + 1;
-console.log(randomNumber, "numero randomico");
+const randomNumber = () => Math.floor(Math.random() * 100) + 1;
+console.log(randomNumber(), "numero randomico");
 
-for (let i = 0; i < serieASquad; i++) {
+for (let i = 0; i < serieASquad.length; i++) {
   const currentSquad = serieASquad[i];
-  currentSquad.points.push(randomNumber);
-  currentSquad.reicevedfaouls.push(randomNumber);
-  console.log(currentSquad);
+
+  currentSquad.points = randomNumber();
+  currentSquad.reicevedfaouls = randomNumber();
+  //   console.log(currentSquad);
 }
+console.log(serieASquad);
