@@ -64,3 +64,8 @@ for (let i = 0; i < serieASquad.length; i++) {
   //   console.log(currentSquad);
 }
 console.log(serieASquad);
+let serieASquadList = [];
+for (let i = 0; i < serieASquad.length; i++) {
+  serieASquadList = delete serieASquad[i].points;
+}
+console.log(serieASquadList);
